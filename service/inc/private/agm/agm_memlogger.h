@@ -5,7 +5,7 @@
 * SPDX-License-Identifier: BSD-3-Clause-Clear
 */
 
-#ifndef AGM_MEMLOG_UNSUPPORTED
+#ifndef AGM_MEMLOG_SUPPORTED
 #include "mem_logger.h"
 #include "graph_queue.h"
 #include "spf_reset_queue.h"
@@ -25,7 +25,7 @@ typedef enum {
 #endif
 #include "gsl_intf.h"
 
-#ifndef AGM_MEMLOG_UNSUPPORTED
+#ifndef AGM_MEMLOG_SUPPORTED
 /// @brief Initializes all memlog queues tracking AGM memory states
 void agm_memlog_init();
 
