@@ -40,7 +40,7 @@
 #include <vector>
 #include <cutils/list.h>
 #include <agm/agm_api.h>
-#include "AGMCallback.h"
+#include "../../agm_ipc_client/inc/AGMCallback.h"
 
 namespace vendor {
 namespace qti {
