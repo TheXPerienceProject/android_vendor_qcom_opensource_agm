@@ -854,7 +854,7 @@ int agm_session_get_buf_info(uint32_t session_id, struct agm_buf_info *buf_info,
 int agm_set_gapless_session_metadata(uint64_t handle, enum agm_gapless_silence_type type,
                                      uint32_t silence)
 {
-    ALOGV("%s called with handle = %x \n", __func__, handle);
+    ALOGV("%s called with handle = %lx \n", __func__, handle);
     if (!agm_server_died) {
         android::sp<IAGM> agm_client = get_agm_server();
         AgmGaplessSilenceType type_hidl = (AgmGaplessSilenceType) type;
@@ -920,7 +920,7 @@ int agm_session_write_with_metadata(uint64_t handle, struct agm_buff *buf, size_
     int32_t ret = -EINVAL;
 
     if (!agm_server_died) {
-        ALOGV("%s:%d hndl %p",__func__, __LINE__, handle);
+        ALOGV("%s:%d hndl %lu",__func__, __LINE__, handle);
         android::sp<IAGM> agm_client = get_agm_server();
         hidl_vec<AgmBuff> buf_hidl(1);
         native_handle_t *allocHidlHandle = nullptr;
