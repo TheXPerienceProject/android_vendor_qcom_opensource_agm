@@ -6,11 +6,12 @@ cc_library_shared {
     owner: "qti",
     vendor: true,
 
-    cflags: ["-Wall"],
+    cflags: ["-Wall","-Wno-format","-Wno-incompatible-pointer-types",],
 
     srcs: ["src/agm_pcm_plugin.c"],
 
     header_libs: [
+        "libarpal_headers",
         "libagm_headers",
         "libarosal_headers",
     ],
@@ -36,6 +37,7 @@ cc_library_shared {
     srcs: ["src/agm_mixer_plugin.c"],
 
     header_libs: [
+        "libarpal_headers",
         "libagm_headers",
         "libarosal_headers",
     ],
@@ -59,6 +61,8 @@ cc_library_shared {
     vendor: true,
 
     srcs: ["src/agm_compress_plugin.c"],
+
+    cflags: ["-Wno-format"],
 
     include_dirs: [
         "external/tinycompress/include",

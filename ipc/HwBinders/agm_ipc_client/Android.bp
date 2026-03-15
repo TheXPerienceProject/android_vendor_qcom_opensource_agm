@@ -14,6 +14,10 @@ cc_library_shared {
         "src/agm_client_wrapper.cpp",
     ],
 
+    cflags: [
+        "-Wno-format",
+    ],
+
     local_include_dirs: ["inc"],
 
     header_libs: ["libagm_headers"],
